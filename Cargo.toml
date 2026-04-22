@@ -7,6 +7,7 @@ readme = "README.md"
 repository = "https://github.com/alexanderthegreat96/list-comp"
 keywords = ["list", "comp", "list_comp", "list-comp"]
 categories = ["development-tools"]
+description = "A collection of procedural macros to mimic Python's list comprehension."
 
 [lib]
 proc-macro = true

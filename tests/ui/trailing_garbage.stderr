@@ -1,0 +1,5 @@
+error: unexpected token
+ --> tests/ui/trailing_garbage.rs:4:35
+  |
+4 |     let _ = comp!(x for x in 0..3 garbage);
+  |                                   ^^^^^^^

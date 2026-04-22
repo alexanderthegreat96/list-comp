@@ -1,0 +1,5 @@
+error: expected `in`
+ --> tests/ui/missing_in.rs:4:27
+  |
+4 |     let _ = comp!(x for x 0..3);
+  |                           ^

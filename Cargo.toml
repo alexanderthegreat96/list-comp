@@ -1,0 +1,20 @@
+[package]
+name = "list_compr"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+readme = "README.md"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.106"
+quote = "1.0.45"
+syn = { version = "2.0.117", features = ["full", "extra-traits", "parsing"] }
+
+[dev-dependencies]
+trybuild = "1"
+# `par_comp!` expands to references like `::rayon::iter::*`; callers who use
+# that macro must add `rayon` to their own `Cargo.toml` as well.
+rayon = "1"

@@ -1,0 +1,7 @@
+error: unexpected end of input, expected `for`
+ --> tests/ui/missing_for.rs:4:13
+  |
+4 |     let _ = comp!(42);
+  |             ^^^^^^^^^
+  |
+  = note: this error originates in the macro `comp` (in Nightly builds, run with -Z macro-backtrace for more info)

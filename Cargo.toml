@@ -4,6 +4,9 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/alexanderthegreat96/list-comp"
+keywords = ["list", "comp", "list_comp", "list-comp"]
+categories = ["development-tools"]
 
 [lib]
 proc-macro = true

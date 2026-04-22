@@ -1,4 +1,4 @@
-use list_compr::map_comp;
+use list_comp::map_comp;
 
 fn main() {
     // Missing the `=>` between key and value.

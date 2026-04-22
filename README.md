@@ -1,4 +1,4 @@
-# list_compr
+# list_comp
 
 Python-style comprehension macros for Rust. Five macros sharing one grammar:
 
@@ -30,7 +30,7 @@ Add to `Cargo.toml`:
 
 ```toml
 [dependencies]
-list_compr = { version="0.1.0" }
+list_comp = { version="0.1.0" }
 ```
 
 For `par_comp!`, also add `rayon`:
@@ -45,7 +45,7 @@ rayon = "1"
 ### `comp!` — iterator
 
 ```rust
-use list_compr::comp;
+use list_comp::comp;
 
 let doubled: Vec<i32> = comp!(x * 2 for x in 1..4).collect();
 // [2, 4, 6]
@@ -75,7 +75,7 @@ let vs: Vec<i32> = comp!(v for x in data if let Some(v) = x).collect();
 ### `vec_comp!` / `set_comp!`
 
 ```rust
-use list_compr::{set_comp, vec_comp};
+use list_comp::{set_comp, vec_comp};
 
 let squares: Vec<i32> = vec_comp!(x * x for x in 1..=3);
 // [1, 4, 9]
@@ -87,7 +87,7 @@ let mod3: std::collections::HashSet<i32> = set_comp!(x % 3 for x in 0..10);
 ### `map_comp!` — `KEY => VALUE`
 
 ```rust
-use list_compr::map_comp;
+use list_comp::map_comp;
 
 let squares = map_comp!(x => x * x for x in 1..=3);
 // HashMap { 1: 1, 2: 4, 3: 9 }
@@ -99,7 +99,7 @@ let lengths = map_comp!(s => s.len() for s in ["a", "bb", "ccc"] if s.len() >= 2
 ### `par_comp!` — rayon parallel iterator
 
 ```rust
-use list_compr::par_comp;
+use list_comp::par_comp;
 use rayon::iter::ParallelIterator;
 
 let total: u64 = par_comp!(expensive(x) for x in 0..1_000_000i64).sum();

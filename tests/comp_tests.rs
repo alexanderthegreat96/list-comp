@@ -1,4 +1,4 @@
-use list_compr::comp;
+use list_comp::comp;
 
 #[test]
 fn test_simple_comprehension() {

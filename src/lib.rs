@@ -238,7 +238,7 @@ fn wrap_conditions(conditions: &[Condition], tail: TokenStream2) -> TokenStream2
 /// Python-style list comprehension returning an `Iterator`.
 ///
 /// ```ignore
-/// use list_compr::comp;
+/// use list_comp::comp;
 ///
 /// let doubled: Vec<i32> = comp!(x * 2 for x in 1..4).collect();
 /// let evens:   Vec<i32> = comp!(x for x in 0..10 if x % 2 == 0).collect();
@@ -257,7 +257,7 @@ pub fn comp(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
 /// Like [`comp!`] but eagerly collects into a `Vec`.
 ///
 /// ```ignore
-/// use list_compr::vec_comp;
+/// use list_comp::vec_comp;
 /// let v = vec_comp!(x * x for x in 1..=3); // Vec<i32> = [1, 4, 9]
 /// ```
 #[proc_macro]
@@ -273,7 +273,7 @@ pub fn vec_comp(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
 /// Like [`comp!`] but eagerly collects into a `HashSet`.
 ///
 /// ```ignore
-/// use list_compr::set_comp;
+/// use list_comp::set_comp;
 /// let s = set_comp!(x % 3 for x in 0..10); // HashSet<i32> = {0, 1, 2}
 /// ```
 #[proc_macro]
@@ -290,7 +290,7 @@ pub fn set_comp(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
 /// collects into a `HashMap`.
 ///
 /// ```ignore
-/// use list_compr::map_comp;
+/// use list_comp::map_comp;
 /// let squares = map_comp!(x => x * x for x in 1..=3);
 /// // HashMap<i32, i32> = {1: 1, 2: 4, 3: 9}
 /// ```
@@ -318,7 +318,7 @@ pub fn map_comp(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
 /// mappings over small ranges, stick with [`comp!`].
 ///
 /// ```ignore
-/// use list_compr::par_comp;
+/// use list_comp::par_comp;
 /// use rayon::iter::ParallelIterator;
 ///
 /// let total: u64 = par_comp!(expensive(x) for x in 0..1_000_000).sum();

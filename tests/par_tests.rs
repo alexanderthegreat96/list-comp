@@ -1,4 +1,4 @@
-use list_compr::par_comp;
+use list_comp::par_comp;
 use rayon::iter::ParallelIterator;
 
 #[test]

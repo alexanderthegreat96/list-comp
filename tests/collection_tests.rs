@@ -1,4 +1,4 @@
-use list_compr::{map_comp, set_comp, vec_comp};
+use list_comp::{map_comp, set_comp, vec_comp};
 use std::collections::{HashMap, HashSet};
 
 #[test]

@@ -1,5 +1,5 @@
 [package]
-name = "list_compr"
+name = "list_comp"
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
